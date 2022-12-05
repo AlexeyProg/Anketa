@@ -3,7 +3,10 @@
 
 #include <QMainWindow>
 #include <QLineEdit>
+#include <QMessageBox>
+
 #include "person.h"
+#include "adminpanel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,9 +21,16 @@ public:
     ~MainWindow();
 
 
+private slots:
+    void on_pushButton_send_clicked();
+
+    void on_pushButton_adminpannel_clicked();
+
 private:
     Ui::MainWindow *ui;
-    void savePerson(Person *pers);
+
+    QList<Person*> personList;
+    void addPersonToList(Person *pers);
     bool isSomeEmpty(QList<QLineEdit*> &listLines);
 };
 #endif // MAINWINDOW_H

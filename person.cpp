@@ -25,3 +25,8 @@ void Person::setSurname(QString mSurname)
 {
     surname = mSurname;
 }
+
+void Person::setName(QString mName)
+{
+    name = mName;
+}

@@ -22,9 +22,6 @@ public:
     void setSurname(QString mSurname);
     void setCitizen(QString mCitizen);
     void setHardSkills(QString mSkills);
-
-    QList<Person*> personList;
-    void addPersonToList(Person *p);
 };
 
 #endif // PERSON_H
