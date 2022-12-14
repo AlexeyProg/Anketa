@@ -16,7 +16,7 @@ class AdminPanel : public QDialog
 public:
     explicit AdminPanel(QWidget *parent = nullptr);
     ~AdminPanel();
-    void takeList(QList<Person*>&list);
+    void takeList(QList<Person*>list);
 
 private:
     void showPersons();

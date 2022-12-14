@@ -60,6 +60,7 @@ void MainWindow::on_pushButton_send_clicked()
         person->setHardSkills(ui->plainTextEdit_hardSkills->toPlainText());
 
         addPersonToList(person);
+        clearFields();
     }
 
 }
@@ -75,5 +76,15 @@ void MainWindow::on_pushButton_adminpannel_clicked()
     AdminPanel *admin_dialog = new AdminPanel(this);
     admin_dialog->takeList(personList);
     admin_dialog->exec();
+}
+
+void MainWindow::clearFields()
+{
+    ui->lineEdit_age->setText("");
+    ui->lineEdit_citizenship->setText("");
+    ui->lineEdit_name->setText("");
+    ui->lineEdit_secondname->setText("");
+    ui->lineEdit_spec->setText("");
+    ui->plainTextEdit_hardSkills->setPlainText("");
 }
 

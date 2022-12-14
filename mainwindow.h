@@ -32,5 +32,6 @@ private:
     QList<Person*> personList;
     void addPersonToList(Person *pers);
     bool isSomeEmpty(QList<QLineEdit*> &listLines);
+    void clearFields();
 };
 #endif // MAINWINDOW_H
